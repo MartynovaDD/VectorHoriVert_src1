@@ -196,6 +196,9 @@ CIntN CIntN::operator-(const CIntN& b) {
         else return r;
     }
     if (sign == true && b.sign == true) {
+        if (a[0] == b.a[0]) {
+            throw - 2;
+        }
         if (a[0] > b.a[0]) {
             for (int i = r.n - 1; i >= 1; i--) {
                 if (t == 1) {
